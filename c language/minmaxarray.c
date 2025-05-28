@@ -7,11 +7,6 @@ int main()
     printf("Enter size of an array: ");
     scanf("%d", &size);
 
-    if (size <= 0)
-    {
-        printf("Array size must be a positive integer.\n");
-        return 1;
-    }
 
     int arr[size];
 
