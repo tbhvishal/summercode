@@ -1,16 +1,26 @@
-
 #include <stdio.h>
-#define MAX_ROWS 10
-#define MAX_COLS 10
-
-void printArrayAndRowSums(int arr[MAX_ROWS][MAX_COLS], int rows, int cols) {
-    for (int i = 0; i < rows; i++) {
+int main() {
+    int rows, cols, i, j;
+    printf("Enter number of rows and columns: ");
+    scanf("%d %d", &rows, &cols);
+    
+    int arr[rows][cols];
+    printf("Enter elements of the 2D array:\n");
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    
+    printf("The 2D array is:\n");
+    for (i = 0; i < rows; i++) {
         int rowSum = 0;
-        for (int j = 0; j < cols; j++) {
+        for (j = 0; j < cols; j++) {
             printf("%d ", arr[i][j]);
             rowSum += arr[i][j];
         }
-        printf("| Row Sum: %d\n", rowSum);
+        printf("| Row sum: %d\n", rowSum);
     }
+    
+    return 0;
 }
-
